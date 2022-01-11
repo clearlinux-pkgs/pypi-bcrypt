@@ -6,7 +6,7 @@
 #
 Name     : pypi-bcrypt
 Version  : 3.2.0
-Release  : 77
+Release  : 78
 URL      : https://files.pythonhosted.org/packages/d8/ba/21c475ead997ee21502d30f76fd93ad8d5858d19a3fad7cd153de698c4dd/bcrypt-3.2.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/d8/ba/21c475ead997ee21502d30f76fd93ad8d5858d19a3fad7cd153de698c4dd/bcrypt-3.2.0.tar.gz
 Source1  : https://files.pythonhosted.org/packages/d8/ba/21c475ead997ee21502d30f76fd93ad8d5858d19a3fad7cd153de698c4dd/bcrypt-3.2.0.tar.gz.asc
@@ -17,19 +17,15 @@ Requires: pypi-bcrypt-license = %{version}-%{release}
 Requires: pypi-bcrypt-python = %{version}-%{release}
 Requires: pypi-bcrypt-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
-Provides: bcrypt
-Provides: bcrypt-python
-Provides: bcrypt-python3
-BuildRequires : cffi
-BuildRequires : pypi(pluggy)
-BuildRequires : py-python
 BuildRequires : pypi(cffi)
+BuildRequires : pypi(py)
 BuildRequires : pypi(setuptools)
 BuildRequires : pypi(six)
 BuildRequires : pypi(wheel)
-BuildRequires : pytest
-BuildRequires : tox
-BuildRequires : pypi(virtualenv)
+BuildRequires : pypi-pluggy
+BuildRequires : pypi-pytest
+BuildRequires : pypi-tox
+BuildRequires : pypi-virtualenv
 
 %description
 ======
@@ -72,7 +68,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1641420423
+export SOURCE_DATE_EPOCH=1641936459
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
