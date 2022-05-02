@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x235AE5F129F9ED98 (paul.l.kehrer@gmail.com)
 #
 Name     : pypi-bcrypt
-Version  : 3.2.0
-Release  : 79
-URL      : https://files.pythonhosted.org/packages/d8/ba/21c475ead997ee21502d30f76fd93ad8d5858d19a3fad7cd153de698c4dd/bcrypt-3.2.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/d8/ba/21c475ead997ee21502d30f76fd93ad8d5858d19a3fad7cd153de698c4dd/bcrypt-3.2.0.tar.gz
-Source1  : https://files.pythonhosted.org/packages/d8/ba/21c475ead997ee21502d30f76fd93ad8d5858d19a3fad7cd153de698c4dd/bcrypt-3.2.0.tar.gz.asc
+Version  : 3.2.2
+Release  : 80
+URL      : https://files.pythonhosted.org/packages/e8/36/edc85ab295ceff724506252b774155eff8a238f13730c8b13badd33ef866/bcrypt-3.2.2.tar.gz
+Source0  : https://files.pythonhosted.org/packages/e8/36/edc85ab295ceff724506252b774155eff8a238f13730c8b13badd33ef866/bcrypt-3.2.2.tar.gz
+Source1  : https://files.pythonhosted.org/packages/e8/36/edc85ab295ceff724506252b774155eff8a238f13730c8b13badd33ef866/bcrypt-3.2.2.tar.gz.asc
 Summary  : Modern password hashing for your software and your servers
 Group    : Development/Tools
 License  : Apache-2.0
@@ -20,7 +20,6 @@ BuildRequires : buildreq-distutils3
 BuildRequires : pypi(cffi)
 BuildRequires : pypi(py)
 BuildRequires : pypi(setuptools)
-BuildRequires : pypi(six)
 BuildRequires : pypi(wheel)
 BuildRequires : pypi-pluggy
 BuildRequires : pypi-pytest
@@ -28,7 +27,11 @@ BuildRequires : pypi-tox
 BuildRequires : pypi-virtualenv
 
 %description
+bcrypt
 ======
+.. image:: https://img.shields.io/pypi/v/bcrypt.svg
+:target: https://pypi.org/project/bcrypt/
+:alt: Latest Version
 
 %package license
 Summary: license components for the pypi-bcrypt package.
@@ -53,22 +56,21 @@ Group: Default
 Requires: python3-core
 Provides: pypi(bcrypt)
 Requires: pypi(cffi)
-Requires: pypi(six)
 
 %description python3
 python3 components for the pypi-bcrypt package.
 
 
 %prep
-%setup -q -n bcrypt-3.2.0
-cd %{_builddir}/bcrypt-3.2.0
+%setup -q -n bcrypt-3.2.2
+cd %{_builddir}/bcrypt-3.2.2
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1649719236
+export SOURCE_DATE_EPOCH=1651521582
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
@@ -81,7 +83,7 @@ python3 -m build --wheel --skip-dependency-check --no-isolation
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/pypi-bcrypt
-cp %{_builddir}/bcrypt-3.2.0/LICENSE %{buildroot}/usr/share/package-licenses/pypi-bcrypt/5feaf15b3fa7d2d226d811e5fcd49098a1ea520c
+cp %{_builddir}/bcrypt-3.2.2/LICENSE %{buildroot}/usr/share/package-licenses/pypi-bcrypt/5feaf15b3fa7d2d226d811e5fcd49098a1ea520c
 pip install --root=%{buildroot} --no-deps --ignore-installed dist/*.whl
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
