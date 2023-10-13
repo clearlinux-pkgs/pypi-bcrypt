@@ -4,7 +4,7 @@
 #
 Name     : pypi-bcrypt
 Version  : 4.0.1
-Release  : 93
+Release  : 94
 URL      : https://files.pythonhosted.org/packages/8c/ae/3af7d006aacf513975fd1948a6b4d6f8b4a307f8a244e1a3d3774b297aad/bcrypt-4.0.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/8c/ae/3af7d006aacf513975fd1948a6b4d6f8b4a307f8a244e1a3d3774b297aad/bcrypt-4.0.1.tar.gz
 Summary  : Modern password hashing for your software and your servers
