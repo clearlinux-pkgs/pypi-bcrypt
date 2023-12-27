@@ -7,7 +7,7 @@
 #
 Name     : pypi-bcrypt
 Version  : 4.1.2
-Release  : 97
+Release  : 98
 URL      : https://files.pythonhosted.org/packages/72/07/6a6f2047a9dc9d012b7b977e4041d37d078b76b44b7ee4daf331c1e6fb35/bcrypt-4.1.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/72/07/6a6f2047a9dc9d012b7b977e4041d37d078b76b44b7ee4daf331c1e6fb35/bcrypt-4.1.2.tar.gz
 Source1  : http://localhost/cgit/vendor/pypi-bcrypt/snapshot/pypi-bcrypt-2023-12-20-23-35-46.tar.xz
